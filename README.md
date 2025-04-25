@@ -264,6 +264,18 @@ These results confirm that the model not only detects objects accurately but als
 
 ---
 
+## Prediction Results Visualization
+
+The performance of the best model (`grid_trial_3`) was further validated by comparing labeled ground truth images with the model's predicted outputs.  
+The side-by-side visualizations show that the model successfully detects and labels the majority of the blood cells with high accuracy.  
+In particular, it effectively localizes densely packed cells, differentiates between classes like Platelets, RBC, and WBC, and provides tight bounding boxes around objects.  
+While a few additional detections are present (especially for RBCs), these often correspond to real cells that were **missed in the original labeling**, as previously noted during the confusion matrix analysis.  
+Overall, the qualitative results align with the strong quantitative performance, reinforcing the model's ability to generalize well and reliably detect blood cell types under various conditions.
+
+![labeled_vs_predicted](https://github.com/KacperTurek/Cerebre-recruitment-task/blob/main/images/best_model_labeled_vs_predicted.png?raw=true)
+
+---
+
 ## Output Files from Notebooks code
 - `notebooks/grid_search_yolov8/` — models trained using grid search
 - `notebooks/grid_search_results.csv` — Grid search results table
