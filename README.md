@@ -226,19 +226,6 @@ This confirms that the grid search tuning was successful and the chosen hyperpar
 
 ---
 
-## Final Model Evaluation
-
-The model trained with the best hyperparameters from the grid search was evaluated on the test set using `evaluate_yolo.py`.
-
-- **mAP@0.5**: The model achieved a strong mean average precision, indicating accurate localization.
-- **Precision & Recall**: The model maintained high precision and good recall, showing its ability to identify blood cells while minimizing false positives.
-- **Visualization**: Predictions on test images were visually inspected. Bounding boxes were well-aligned with actual objects.
-- **Failure Analysis**: A few challenging cases with overlapping cells or low-contrast images were noted where the model had difficulty.
-
-This evaluation confirmed that the grid-searched model generalizes well and is suitable for deployment or further research.
-
----
-
 ## Analysis of Confusion Matrix
 
 During evaluation of the best model (`grid_trial_3`), the normalized confusion matrix revealed some false positive detections, especially for the RBC (Red Blood Cells) class.  
